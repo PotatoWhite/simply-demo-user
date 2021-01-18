@@ -1,0 +1,21 @@
+apply plugin: 'maven-publish'
+
+bootJar.enabled(false)
+jar.enabled(true)
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId('io.crcell.eventable.demo')
+            artifactId('demo-user-spec')
+            version('0.0.4-SNAPSHOT')
+
+            from components.java
+        }
+    }
+}
+
+dependencies {
+
+}
+

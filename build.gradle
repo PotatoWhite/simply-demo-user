@@ -1,0 +1,87 @@
+buildscript {
+    ext {
+        springBootVersion = '2.4.1'
+        springDependencyManagementVersion = '1.0.10.RELEASE'
+    }
+}
+
+plugins {
+    id 'org.springframework.boot' version "${springBootVersion}"
+    id 'io.spring.dependency-management' version "${springDependencyManagementVersion}"
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+configurations{
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+
+bootJar.enabled(false)
+
+group 'io.crcell.eventable.demo'
+version '0.0.2-SNAPSHOT'
+
+
+subprojects {
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'java'
+
+    sourceCompatibility = '11'
+    targetCompatibility = '11'
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        implementation 'io.crcell.eventable:serviceable:0.0.3-SNAPSHOT'
+        
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+
+        implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+        implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+        testImplementation('org.springframework.boot:spring-boot-starter-test') {
+            exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+        }
+    }
+
+
+    task initSourceFolders {
+        sourceSets*.java.srcDirs*.each {
+            if (!it.exists()) {
+                it.mkdirs()
+            }
+        }
+        sourceSets*.resources.srcDirs*.each {
+            if (!it.exists()) {
+                it.mkdirs()
+            }
+        }
+
+        def gradleFile = new File(projectDir, "build.gradle")
+        if (!gradleFile.exists())
+            gradleFile.text = ""
+    }
+}
+
+project(':demo-user-spec'){
+}
+
+project(':demo-user-service') {
+    dependencies {
+        compile project(':demo-user-spec')
+    }
+}
+
+

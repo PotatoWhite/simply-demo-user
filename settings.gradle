@@ -1,0 +1,3 @@
+rootProject.name = 'demo-user'
+include('demo-user-spec')
+include('demo-user-service')

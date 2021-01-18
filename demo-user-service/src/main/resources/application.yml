@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: demo-user-service
+  datasource:
+    url: jdbc:mariadb://localhost:3306/producer
+    username: test
+    password: test
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+  kafka:
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: io.crcell.pramework.eventable
+    bootstrap-servers: localhost:9092
+
+pramework:
+  entity-base-package: io.crcell.demo.entities
+  topic-property:
+    number-of-replicas: 1
+    number-of-partitions: 10
+

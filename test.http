@@ -1,0 +1,36 @@
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "account": "test12@example.com",
+  "name": "홍길동",
+  "mobile": 1234,
+  "addresses": [
+    {
+      "type": "Home",
+      "zipcode": "1234"
+    }
+  ]
+}
+
+###
+
+GET http://localhost:8080/users
+Content-Type: application/json
+
+
+###
+PUT http://localhost:8080/users/2
+Content-Type: application/json
+
+{
+  "account": "test12@example.com",
+  "name": "홍길동",
+  "mobile": 1234,
+  "addresses": [
+    {
+      "type": "Home",
+      "zipcode": "1234"
+    }
+  ]
+}
