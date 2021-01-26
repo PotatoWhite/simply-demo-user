@@ -43,7 +43,7 @@ subprojects {
     }
 
     dependencies {
-        implementation 'io.crcell.eventable:serviceable:0.0.3-SNAPSHOT'
+        implementation 'io.crcell.eventable:serviceable:0.0.9-SNAPSHOT'
         
         compileOnly 'org.projectlombok:lombok'
         annotationProcessor 'org.projectlombok:lombok'

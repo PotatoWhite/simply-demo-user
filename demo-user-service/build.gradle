@@ -6,10 +6,12 @@ jar.enabled(false)
 
 dependencies {
     implementation project(':demo-user-spec')
+    // https://mvnrepository.com/artifact/io.github.scouter-project/scouter-agent-java
+//    compile group: 'io.github.scouter-project', name: 'scouter-agent-java', version: '2.10.2'
+
 
     runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 
     implementation 'org.springframework.kafka:spring-kafka'
     implementation("org.springframework.boot:spring-boot-starter-web")
 }
-

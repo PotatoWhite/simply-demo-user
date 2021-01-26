@@ -1,3 +1,5 @@
+server:
+  port: 8081
 spring:
   application:
     name: demo-user-service
@@ -26,4 +28,3 @@ pramework:
   topic-property:
     number-of-replicas: 1
     number-of-partitions: 10
-

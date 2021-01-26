@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 import io.crcell.pramework.eventable.producer.Eventable;
 import lombok.Getter;
@@ -20,6 +21,7 @@ public class User implements Eventable<Long> {
 
     private String name;
 
+    @NotNull
     @Column(unique = true)
     private String email;
 }
