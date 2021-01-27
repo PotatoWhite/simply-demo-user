@@ -15,7 +15,7 @@ repositories {
     mavenCentral()
 }
 
-configurations{
+configurations {
     compileOnly {
         extendsFrom annotationProcessor
     }
@@ -43,13 +43,15 @@ subprojects {
     }
 
     dependencies {
-        implementation 'io.crcell.eventable:serviceable:0.0.9-SNAPSHOT'
-        
-        compileOnly 'org.projectlombok:lombok'
-        annotationProcessor 'org.projectlombok:lombok'
+        implementation 'io.crcell:simply-starter:0.0.1-SNAPSHOT'
+
 
         implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
         implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
 
         testImplementation('org.springframework.boot:spring-boot-starter-test') {
             exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
@@ -75,7 +77,7 @@ subprojects {
     }
 }
 
-project(':demo-user-spec'){
+project(':demo-user-spec') {
 }
 
 project(':demo-user-service') {

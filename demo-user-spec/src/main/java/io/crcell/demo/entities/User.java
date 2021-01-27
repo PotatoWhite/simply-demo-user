@@ -1,18 +1,16 @@
 package io.crcell.demo.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
-
-import io.crcell.pramework.eventable.producer.Eventable;
+import io.crcell.simply.eventable.producer.Eventable;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
+@ToString
 @Entity
 public class User implements Eventable<Long> {
     @Id
