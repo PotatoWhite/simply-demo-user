@@ -14,9 +14,9 @@ spring:
     show-sql: true
   kafka:
     bootstrap-servers: localhost:9092
-
 simply:
   eventable:
+    entity-base-package: io.crcell.demo.entities
     topic-property:
       number-of-replicas: 1
       number-of-partitions: 10
