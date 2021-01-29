@@ -13,14 +13,14 @@ public class UserListener extends AbstractConsumer<User, Long> {
     }
 
     @Override
-    public User onSave(User entity) {
+    public User onSave(String key, User entity) {
         log.info("SAVE {}", entity.toString());
         return entity;
     }
 
     @Override
-    public Boolean onDelete(Long aLong) {
-        log.info("DELETE {}", aLong);
-        return true;
+    public Boolean onDelete(String key) {
+        log.info("DELETE {}", key);
+        return null;
     }
 }
