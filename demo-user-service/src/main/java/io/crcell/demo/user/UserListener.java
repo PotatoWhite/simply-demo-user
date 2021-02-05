@@ -1,13 +1,13 @@
 package io.crcell.demo.user;
 
 import io.crcell.demo.entities.User;
-import io.crcell.simply.eventable.consumer.AbstractConsumer;
+import io.crcell.simply.eventable.consumer.AbstractSimplyConsumer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component
-public class UserListener extends AbstractConsumer<User, Long> {
+public class UserListener extends AbstractSimplyConsumer<User, Long> {
     protected UserListener() {
         super(User.class);
     }

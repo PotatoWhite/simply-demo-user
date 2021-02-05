@@ -1,9 +1,52 @@
-POST http://localhost:8081/users
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "email": "test125@example.com",
+  "name": "홍길동",
+  "mobile": 1234,
+  "addresses": [
+    {
+      "type": "Home",
+      "zipcode": "1234"
+    }
+  ]
+}
+
+###
+POST http://localhost:8080/test
+Content-Type: application/json
+
+{
+  "email": "test123@example.com",
+  "name": "홍길동",
+  "mobile": 1234,
+  "addresses": [
+    {
+      "type": "Home",
+      "zipcode": "1234"
+    }
+  ]
+}
+
+###
+DELETE http://localhost:8080/users/1
+Content-Type: application/json
+
+
+###
+GET localhost:8080/users
+
+###
+GET localhost:8080/test
+
+###
+PUT http://localhost:8080/test/1
 Content-Type: application/json
 
 {
   "email": "test121@example.com",
-  "name": "홍길동",
+  "name": "홍길22동1",
   "mobile": 1234,
   "addresses": [
     {
@@ -13,41 +56,14 @@ Content-Type: application/json
   ]
 }
 
-###
-
-DELETE http://localhost:8081/users/1
-Content-Type: application/json
-
 
 ###
-PUT http://localhost:8081/users/1
+PATCH http://localhost:8080/test/1
 Content-Type: application/json
 
 {
-  "account": "test121@example.com",
-  "name": "홍길동",
-  "mobile": 1234,
-  "addresses": [
-    {
-      "type": "Home",
-      "zipcode": "1234"
-    }
-  ]
+  "name": "홍길동12"
 }
 
-
-###
-PATCH http://localhost:8081/users/1
-Content-Type: application/json
-
-{
-  "email": "test12@example.com",
-  "name": "홍길동",
-  "mobile": 1234,
-  "addresses": [
-    {
-      "type": "Home",
-      "zipcode": "1234"
-    }
-  ]
-}
+###return
+DELETE http://localhost:8080/test/1
