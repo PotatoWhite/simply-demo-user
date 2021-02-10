@@ -13,8 +13,14 @@ public class UserListener extends AbstractSimplyConsumer<User, Long> {
     }
 
     @Override
-    public User onSave(String key, User entity) {
-        log.info("SAVE {}", entity.toString());
+    public User onUpdate(String key, User entity) {
+        log.info("UPDATE {}", entity.toString());
+        return null;
+    }
+
+    @Override
+    public User onCreate(String key, User entity) {
+        log.info("CREATE {}", entity.toString());
         return entity;
     }
 
