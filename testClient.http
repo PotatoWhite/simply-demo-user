@@ -1,0 +1,64 @@
+# Create
+POST http://localhost:8080/test
+Content-Type: application/json
+
+{
+  "email": "test125@example.com",
+  "name": "홍길동",
+  "mobile": 1234,
+  "addresses": [
+    {
+      "type": "Home",
+      "zipcode": "1234"
+    }
+  ]
+}
+
+###
+PUT http://localhost:8080/test/1
+Content-Type: application/json
+
+{
+  "email": "test121@example.com",
+  "name": "홍길동_replaced",
+  "mobile": 1234,
+  "addresses": [
+    {
+      "type": "Home",
+      "zipcode": "1234"
+    }
+  ]
+}
+
+###
+PATCH http://localhost:8080/test/1
+Content-Type: application/json
+
+{
+  "name": "홍길동_patched"
+}
+
+
+
+###
+DELETE http://localhost:8080/test/1
+Content-Type: application/json
+
+
+###
+GET localhost:8080/test/2
+
+###
+GET localhost:8080/users
+
+
+###
+PATCH http://localhost:8080/test/1
+Content-Type: application/json
+
+{
+  "name": "홍길동12"
+}
+
+###return
+DELETE http://localhost:8080/test/1
