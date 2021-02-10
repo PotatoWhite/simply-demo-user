@@ -2,7 +2,7 @@ package io.crcell.demo;
 
 import io.crcell.demo.entities.User;
 import io.crcell.demo.user.UserClient;
-import io.crcell.simply.controllable.SimplyControllableResponse;
+import io.easywalk.simply.controllable.SimplyControllableResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;

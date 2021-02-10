@@ -1,6 +1,6 @@
 package io.crcell.demo.entities;
 
-import io.crcell.simply.eventable.producer.Eventable;
+import io.easywalk.simply.eventable.producer.Eventable;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

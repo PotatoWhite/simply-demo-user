@@ -1,7 +1,7 @@
 package io.crcell.demo.user;
 
 import io.crcell.demo.entities.User;
-import io.crcell.simply.serviceable.AbstractServiceable;
+import io.easywalk.simply.serviceable.AbstractServiceable;
 import org.springframework.stereotype.Service;
 
 @Service

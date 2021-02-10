@@ -1,7 +1,7 @@
 package io.crcell.demo.user;
 
 import io.crcell.demo.entities.User;
-import io.crcell.simply.eventable.consumer.AbstractSimplyConsumer;
+import io.easywalk.simply.eventable.consumer.AbstractSimplyConsumer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 

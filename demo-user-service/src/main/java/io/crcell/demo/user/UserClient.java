@@ -1,7 +1,7 @@
 package io.crcell.demo.user;
 
 import io.crcell.demo.entities.User;
-import io.crcell.simply.clientable.AbstractClientable;
+import io.easywalk.simply.clientable.AbstractClientable;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 

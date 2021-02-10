@@ -24,8 +24,8 @@ configurations {
 
 bootJar.enabled(false)
 
-group 'io.crcell.eventable.demo'
-version '0.0.2-SNAPSHOT'
+group 'io.crcell.simply.demo'
+version '0.0.1-SNAPSHOT'
 
 
 subprojects {
@@ -43,12 +43,13 @@ subprojects {
     }
 
     dependencies {
-        implementation 'io.crcell:simply-starter:0.0.5-SNAPSHOT'
-
+        implementation 'io.easywalk:simply-serviceable:0.0.1-SNAPSHOT'
+        implementation 'io.easywalk:simply-controllable:0.0.1-SNAPSHOT'
+        implementation 'io.easywalk:simply-eventable:0.0.1-SNAPSHOT'
+        implementation 'io.easywalk:simply-clientable:0.0.1-SNAPSHOT'
 
         implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
         implementation 'org.springframework.boot:spring-boot-starter-validation'
-
 
         compileOnly 'org.projectlombok:lombok'
         annotationProcessor 'org.projectlombok:lombok'
