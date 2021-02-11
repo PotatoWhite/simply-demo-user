@@ -3,7 +3,7 @@ POST http://localhost:8080/test
 Content-Type: application/json
 
 {
-  "email": "test125@example.com",
+  "email": "test1251@example.com",
   "name": "홍길동",
   "mobile": 1234,
   "addresses": [
