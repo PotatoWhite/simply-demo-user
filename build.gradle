@@ -43,6 +43,7 @@ subprojects {
     }
 
     dependencies {
+        implementation 'io.easywalk:simply-common:0.0.1-SNAPSHOT'
         implementation 'io.easywalk:simply-serviceable:0.0.1-SNAPSHOT'
         implementation 'io.easywalk:simply-controllable:0.0.1-SNAPSHOT'
         implementation 'io.easywalk:simply-eventable-kafka-binder:0.0.1-SNAPSHOT'
