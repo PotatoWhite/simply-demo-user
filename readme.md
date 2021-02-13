@@ -76,6 +76,33 @@ docker-compose를 통한 kafka 실행(docker-compose.yaml 이 존재하는 direc
 ### 기본 UserService 생성
 demo-user-spec의 User Entity를 사용하는 Service를 만든다.
 - UserService
+```java
+@Getter
+@Setter
+@ToString
+@Entity
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    private String name;
+
+    @NotNull
+    @Column(unique = true)
+    private String email;
+}
+```
+
+```java
+@Service
+public class UserService extends AbstractServiceable<User, Long> {
+
+    protected UserService(UserRepository repository) {
+        super(repository);
+    }
+}
+```
 
 ### Restful API 생성
 UserService를 사용햐는 Controller를 만든다.
