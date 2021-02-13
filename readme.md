@@ -137,7 +137,7 @@ public class UserService extends AbstractServiceable<User, Long> {
 
 ### Producer Kafka를 통해 Entity의 변경 수신 기능 생성
 변경을 전파할 Entity 설정 
-- Eventable을 상속받는다. Long은 ID의 Type이다.
+- Eventable 인터페이스를 구현한다. Long은 ID의 Type이다.
 
 ```java
 
